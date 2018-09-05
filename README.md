@@ -1,4 +1,4 @@
-#Ebook Zip
+# Ebook Zip
 
 A simple, cross-platform zipper for epub folders.
 
