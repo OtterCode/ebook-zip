@@ -1,0 +1,161 @@
+@charset "utf-8";
+@namespace epub 'http://www.idpf.org/2007/ops';
+
+@font-face {
+	font-family: Morris;
+	src: url(../fonts/MorrisInitialen.ttf);
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+	font-family: Litos;
+	src: url(../fonts/litosscriptregular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+	font-family: Litos;
+	src: url(../fonts/litosscriptbold.ttf);
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+	font-family: Litos;
+	src: url(../fonts/litosscriptbolditalic.ttf);
+    font-style: italic;
+    font-weight: 700;
+}
+
+@font-face {
+	font-family: Litos;
+	src: url(../fonts/litosscriptitalic.ttf);
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+/* Remove margin for WebKit-based reading systems.
+*/
+
+/*  Disable hyphenation for headings to avoid single-syllable-lines.
+*/
+h1,
+h2 {
+	  -epub-hyphens: none;
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+}
+
+/* Set the minimum amount of lines to show up on a seperate page. (There is not much support for this at the moment.)
+*/
+p,
+blockquote {
+  orphans: 2;
+  widows: 2;
+}
+
+/*  Turn on hyphenation for paragraphs and captions only.
+*/
+p,
+figcaption {
+	  -epub-hyphens: auto;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+}
+
+/*  Shortcodes for page-break rules.
+    Use data attributes to designate if and how the page should be broken before, inside or after an element.
+*/
+h1, h2, h3, h4, h5, h6,
+table, img, figure, video,
+[data-page-break~=inside][data-page-break~=avoid] { page-break-inside:  avoid; }
+[data-page-break~=after]                          { page-break-after:  always; }
+h1, h2, h3, h4, h5, h6,
+[data-page-break~=after][data-page-break~=avoid]  { page-break-after:   avoid; }
+[data-page-break~=before]                         { page-break-before: always; }
+[data-page-break~=before][data-page-break~=avoid] { page-break-before:  avoid; }
+img[data-page-break~=before]                      { page-break-before:   left; }
+
+
+/*  Custom Styles
+*/
+
+p {
+	text-indent: 1.3em;
+	margin: .1em;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+h2 {
+	font-family: Litos;
+	margin-bottom: 1em;
+	font-size: 3em;
+}
+
+.none {
+	list-style: none;
+      text-align: center;
+      padding: 0;
+      line-height: 1.3em;
+}
+
+.verse {
+	font-family: Litos;
+	text-indent: 0;
+	margin-left: 1.5em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-style: italic;
+	font-size: 1.2em;
+}
+
+.first {
+	text-indent: 0;
+}
+
+.drop {
+	font-family: Morris;
+	font-size: 4em;
+	font-weight: 700;
+	float: left;
+	margin-top: -.25em;
+	margin-bottom: -.1em;
+}
+
+.chapimg img {
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+
+.left {
+      float: left;
+      width: 4em;
+}
+
+.right {
+      float: right;
+      width: 4em;
+}
+
+.rightbig {
+      float: right;
+      width: 5em;
+}
+
+.leftbig {
+      float: left;
+      width: 5em;
+}
+
+.centerimg {
+      display: block;
+      margin: auto;
+      width: 10em;
+}

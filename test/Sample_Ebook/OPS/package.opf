@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package version='3.0'
+         unique-identifier='pub-id'
+         xmlns='http://www.idpf.org/2007/opf'
+         prefix='ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/'>
+  <metadata xmlns:dc='http://purl.org/dc/elements/1.1/'>
+
+
+    <!-- File Info -->
+    <dc:format>application/epub+zip</dc:format>
+
+    <!-- UUID -->
+    <dc:identifier id='pub-id'>urn:uuid:c453d407-119c-4521-bedd-69d93e3103c8</dc:identifier>
+    <meta refines='#pub-id' property='identifier-type' scheme='xsd:string'>uuid</meta>
+    
+    <meta property='dcterms:modified'>2017-06-28T10:13:30Z</meta>
+
+
+    <!-- Book Info -->
+    <dc:title id='title'>A Selection of Illustrated Fairy Tales</dc:title>
+    <meta refines='#title' property='file-as'>Selection of Illustrated Fairy Tales, A</meta>
+    <meta refines='#title' property='title-type'>main</meta>
+    <meta refines='#title' property='display-seq'>1</meta>
+
+    <dc:description>Portfolio ebook project. Text from the Gutenberg Project. Illustrations by Meagan N. Crowley.</dc:description>
+    <dc:subject>Fiction</dc:subject>
+    <dc:subject>Fairy Tale</dc:subject>
+    <dc:subject>Folk Tale</dc:subject>
+
+    <dc:language>en</dc:language>
+    <dc:date>2017-06-27</dc:date>
+
+
+    <!-- Author Info -->
+    <dc:creator id='author'>The Brothers Grimm</dc:creator>
+    <meta refines='#author' property='file-as'>Grimm Brothers</meta>
+    <meta refines='#author' property='role' scheme='marc:relators'>aut</meta>
+    <dc:contributor id='artist'>Meagan N. Crowley</dc:contributor>
+    <meta refines='#artist' property='file-as'>Crowley, Meagan N.</meta>
+    <meta refines='#artist' property='role' scheme='marc:relators'>ill</meta>
+
+
+    <!-- Publisher Info-->
+    <dc:publisher id='publisher'>A. Michelle Raymond</dc:publisher>
+    <meta refines='#publisher' property='file-as'>Raymond, A. Michelle</meta>
+    <meta refines='#publisher' property='role' scheme='marc:relators'>pbl</meta>
+
+    <dc:rights>All images copyright 2017 Meagan Crowley. All rights reserved.</dc:rights>
+
+
+    <meta name='cover' content='coverimage'/>
+
+
+    <meta property='ibooks:version'>1.0.0</meta>               <!--                          | Set book version. [major].[minor].[bugfix]  -->
+    <meta property='ibooks:specified-fonts'>true</meta>        <!-- true/false               | Enable custom fonts (via @font-face).       -->
+    <meta property='rendition:layout'>reflowable</meta>        <!-- reflowable/pre-paginated | Set wether or not to use a fixed layout.    -->
+    <meta property='rendition:spread'>none</meta>              <!-- (auto|both)/none         | Set spread behaviour when opening.          -->
+    <meta property='rendition:orientation'>auto</meta>         <!-- auto/portrait/landscape  | Set portrait or landscape orientation-lock. -->
+    <meta property='ibooks:iphone-orientation-lock'>none</meta><!-- portrait-only/landscape-only/none                                      -->
+    <meta property='ibooks:ipad-orientation-lock'>none</meta>  <!-- portrait-only/landscape-only/none                                      -->
+
+
+  </metadata><manifest>
+
+
+    <!-- Book -->
+    <item media-type='application/xhtml+xml'    id='book-cover'           href='book/cover.xhtml'/>
+    <item media-type='application/xhtml+xml'    id='book-toc'             href='book/table-of-contents.xhtml' properties='nav'/>
+    <item media-type='application/x-dtbncx+xml' id='book-toc-ncx'         href='book/table-of-contents.ncx'/>
+    <item media-type='application/xhtml+xml'    id='chap01'         href='book/chap01.xhtml'/>
+    <item media-type='application/xhtml+xml'    id='chap02'         href='book/chap02.xhtml'/>
+    <item media-type='application/xhtml+xml'    id='chap03'         href='book/chap03.xhtml'/>
+    <item media-type='application/xhtml+xml'    id='chap04'         href='book/chap04.xhtml'/>
+
+    <!-- Fonts -->
+    <item media-type='application/font-sfnt'    id='Litos' href='fonts/litosscriptregular.ttf'/>
+    <item media-type='application/font-sfnt'    id='LitosB' href='fonts/litosscriptbold.ttf'/>
+    <item media-type='application/font-sfnt'    id='LitosBI' href='fonts/litosscriptbolditalic.ttf'/>
+    <item media-type='application/font-sfnt'    id='LitosI' href='fonts/litosscriptitalic.ttf'/>
+    <item media-type='application/font-sfnt'    id='Morris' href='fonts/MorrisInitialen.ttf'/>
+
+    <!-- CSS -->
+    <item media-type='text/css'                 id='css-Kindle'            href='css/kindle.css'/>
+    <item media-type='text/css'                 id='css-main'             href='css/main.css'/>
+
+    <!-- Images -->
+    <item media-type='image/png'                id='coverimage'           href='images/cover.png' properties='cover-image'/>
+    <item media-type='image/png'                id='birds'           href='images/birds.png'/>
+    <item media-type='image/png'                id='birdcage'           href='images/birdcage.png'/>
+    <item media-type='image/png'                id='flower'           href='images/flower.png'/>
+    <item media-type='image/png'                id='fox'           href='images/fox.png'/>
+    <item media-type='image/png'                id='goldenapple'           href='images/goldenapple.png'/>
+    <item media-type='image/png'                id='goldenbird'           href='images/goldenbird.png'/>
+    <item media-type='image/png'                id='goldenfeather'           href='images/goldenfeather.png'/>
+
+
+  </manifest>
+  <spine toc='book-toc-ncx'>
+
+
+    <itemref idref='book-cover' linear='no'/>
+    <itemref idref='book-toc'/>
+    <itemref idref='chap01'/>
+    <itemref idref='chap02'/>
+    <itemref idref='chap03'/>
+    <itemref idref='chap04'/>
+
+
+  </spine>
+</package>

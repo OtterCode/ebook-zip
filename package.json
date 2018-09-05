@@ -1,0 +1,27 @@
+{
+  "name": "ebook-zip",
+  "version": "1.0.0",
+  "description": "A zipping epub generator.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node index.js test/Sample_Ebook && java -jar test/epubcheck-4.0.2/epubcheck.jar -q -w --failonwarnings test/Sample_Ebook.epub && echo Valid output.",
+    "build": "pkg index.js --output ebook-zip --targets node8"
+  },
+  "keywords": [
+    "epub",
+    "zip"
+  ],
+  "author": "Emmett Raymond",
+  "license": "CC-BY-SA-4.0",
+  "dependencies": {
+    "yazl": "^2.4.3",
+    "fs-promise-native": "^1.0.0",
+    "walkdir": "0.0.12"
+  },
+  "devDependencies": {
+    "pkg": "^4.3.1"
+  }
+}
